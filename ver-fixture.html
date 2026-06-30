@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Ver Fixture - Gestión de Fixtures</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <h1>Fixture</h1>
+      <p class="subtitle">Agenda de encuentros</p>
+    </div>
+  </header>
+
+  <nav class="site-nav">
+    <div class="container nav-inner">
+      <a href="/index.html" class="nav-link">Dashboard</a>
+      <a href="/alta-fixture.html" class="nav-link">Registrar Encuentro</a>
+      <a href="/ver-fixture.html" class="nav-link">Ver Fixture</a>
+    </div>
+  </nav>
+
+  <main class="container main-content two-column">
+    <section class="fixture-list">
+      <h2>Partidos Programados</h2>
+      <table class="fixture-table" aria-describedby="fixture-desc">
+        <caption id="fixture-desc">Tabla con la fecha, hora, equipos, sede e instancia</caption>
+        <thead>
+          <tr>
+            <th>Fecha</th>
+            <th>Hora</th>
+            <th>Local</th>
+            <th>Visitante</th>
+            <th>Sede</th>
+            <th>Instancia</th>
+            <th>Acciones</th>
+          </tr>
+        </thead>
+        <tbody id="fixture-body">
+          <tr><td colspan="7">Cargando fixtures...</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <aside class="sidebar">
+      <h3>Información</h3>
+      <p>Reglamento rápido: Todos los encuentros deben registrarse con fecha, hora y sede.</p>
+      <h4>Tabla de posiciones (rápida)</h4>
+      <div id="quick-table">Sin datos</div>
+    </aside>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2026 - Sistema de Gestión de Fixtures</p>
+    </div>
+  </footer>
+
+  <script src="/js/fixtures.js" defer></script>
+</body>
+</html>

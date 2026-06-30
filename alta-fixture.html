@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Registrar Encuentro - Gestión de Fixtures</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <h1>Registrar Encuentro</h1>
+      <p class="subtitle">Carga de jornadas y enfrentamientos</p>
+    </div>
+  </header>
+
+  <nav class="site-nav">
+    <div class="container nav-inner">
+      <a href="/index.html" class="nav-link">Dashboard</a>
+      <a href="/alta-fixture.html" class="nav-link">Registrar Encuentro</a>
+      <a href="/ver-fixture.html" class="nav-link">Ver Fixture</a>
+    </div>
+  </nav>
+
+  <main class="container main-content">
+    <section class="form-section">
+      <form id="fixture-form" class="fixture-form" novalidate>
+        <div class="form-row">
+          <label for="local">Equipo Local</label>
+          <input id="local" name="local" list="teams" required placeholder="Ej: Argentina">
+          <datalist id="teams">
+            <option value="Argentina"></option>
+            <option value="Estados Unidos"></option>
+            <option value="México"></option>
+            <option value="Canadá"></option>
+            <option value="Brasil"></option>
+          </datalist>
+        </div>
+
+        <div class="form-row">
+          <label for="visitor">Equipo Visitante</label>
+          <input id="visitor" name="visitor" list="teams" required placeholder="Ej: Brasil">
+        </div>
+
+        <div class="form-row">
+          <label for="date">Fecha</label>
+          <input id="date" name="date" type="date" required>
+        </div>
+
+        <div class="form-row">
+          <label for="time">Hora</label>
+          <input id="time" name="time" type="time" required>
+        </div>
+
+        <div class="form-row">
+          <label for="venue">Sede / Cancha</label>
+          <input id="venue" name="venue" type="text" required placeholder="Estadio, cancha o sala">
+        </div>
+
+        <fieldset class="form-row">
+          <legend>Instancia del torneo</legend>
+          <label><input type="radio" name="phase" value="Fase de Grupos" required> Fase de Grupos</label>
+          <label><input type="radio" name="phase" value="Cuartos de Final"> Cuartos de Final</label>
+          <label><input type="radio" name="phase" value="Semifinal"> Semifinal</label>
+          <label><input type="radio" name="phase" value="Final"> Final</label>
+        </fieldset>
+
+        <div class="form-actions">
+          <button type="submit" class="btn primary">REGISTRAR ENCUENTRO</button>
+          <button type="reset" class="btn">RESTABLECER FORMULARIO</button>
+        </div>
+      </form>
+
+      <div id="message" role="status" aria-live="polite"></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2026 - Sistema de Gestión de Fixtures</p>
+    </div>
+  </footer>
+
+  <script src="/js/fixtures.js" defer></script>
+</body>
+</html>
